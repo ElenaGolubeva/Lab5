@@ -41,13 +41,13 @@ def get_text_messages(message):
     # По очереди готовим текст и обработчик для каждого знака зодиака
     key_cat = types.InlineKeyboardButton(text='Котята', callback_data='cats')
     # И добавляем кнопку на экран
-    keyboard.add(key_oven)
+    keyboard.add(key_cat)
     key_dog = types.InlineKeyboardButton(text='Щенята', callback_data='dogs')
-    keyboard.add(key_telec)
+    keyboard.add(key_dog)
     key_bird = types.InlineKeyboardButton(text='Птички', callback_data='birds')
-    keyboard.add(key_bliznecy)
+    keyboard.add(key_bird)
     key_another = types.InlineKeyboardButton(text='Другое', callback_data='another')
-    keyboard.add(key_rak)
+    keyboard.add(key_another)
     bot.send_message(message.from_user.id, text='Выбери одно животное', reply_markup=keyboard)
 
 
